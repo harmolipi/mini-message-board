@@ -12,16 +12,17 @@
   <h1>
     <%= title %>
   </h1>
-  <p>Welcome to <%= title %>
-  </p>
-  <% messages.forEach((message)=> { %>
-    <div class='message-info'>
-      <%= message.user %> - <%= message.added %>
-    </div>
-    <p>
-      <%= message.text %>
-    </p>
-    <% }) %>
+  <h2>Welcome to the <%= title %>
+  </h2>
+  <p><a href="/new">New Message</a></p>
+  <ul id="messages">
+    <% messages.forEach((message)=> { %>
+      <li class='message-info'>
+        <%= message.user %> - <%= message.added %><br />
+            <%= message.text %>
+      </li>
+      <% }) %>
+  </ul>
 </body>
 
 </html>
